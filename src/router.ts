@@ -1,9 +1,10 @@
 import express from "express";
+import { StatusCodes } from "http-status-codes";
 
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  return res.send("Hello Word");
+  return res.status(StatusCodes.ACCEPTED).json("Heelo word");
 });
 
 export default router;
